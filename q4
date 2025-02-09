@@ -1,0 +1,46 @@
+//Escreva um programa que leia um vetor do usu ́ario e imprima seus valores e seus endere ̧cos. Teste
+//o vetor com tipos de dados diferentes, analise os endere ̧cos. O que vocˆe observou?
+
+//CODIGO SEM DEFINE 
+
+#include <stdio.h>
+
+int tamanho, num;
+
+int main(){
+  
+  printf("Digite o tamanho do vetor:\n ");
+  scanf("%d", &tamanho);
+
+  int vetor[tamanho];
+
+  for(int i = 0; i < tamanho; i++){
+    printf("Digite o valor do vetor na posição %d desejada:\n", i);
+    scanf("%d", &vetor[i]);
+  }
+  printf("\nValores e endereços do vetor de inteiros:\n");
+    for (int i = 0; i < tamanho; i++) {
+        printf("Valor: %d, Endereço: %p\n", vetor[i], (void*)&vetor[i]);
+    }
+  return 0;
+}
+
+//CODIGO COM DEFINE
+
+#include <stdio.h>
+#define tamanho 5
+
+int main(){
+  
+  int vetor[tamanho];
+
+  for(int i = 0; i < tamanho; i++){
+    printf("Digite o valor do vetor na posição %d desejada:\n", i);
+    scanf("%d", &vetor[i]);
+  }
+  printf("\nValores e endereços do vetor de inteiros:\n");
+    for (int i = 0; i < tamanho; i++) {
+        printf("Valor: %d, Endereço: %p\n", vetor[i], (void*)&vetor[i]);
+    }
+  return 0;
+}
