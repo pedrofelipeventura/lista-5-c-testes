@@ -1,0 +1,25 @@
+//Escreva um programa que solicite iterativamente um n ́umero do usu ́ario e imprima sempre o menor
+//valor fornecido. Crie um crit ́erio para finaliza ̧c ̃ao do programa. Utilize ponteiros.
+
+#include <stdio.h>
+
+int menornum = 23456789;
+int num;
+
+int main(){
+
+int *Menornum = &menornum;
+  
+  do{
+    printf("Digite um numero:(Digite 0 para sair)\n");
+    scanf("%d", &num);
+
+    if(num < menornum){
+      menornum = num;
+    }
+
+    printf("O menor número é igual a: %d\n", *Menornum);
+    
+  } while(num != 0);
+  return 0;
+}
