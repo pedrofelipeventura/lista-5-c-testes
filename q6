@@ -1,0 +1,20 @@
+//Escreva um programa que copie uma string para outra usando ponteiros.
+
+//Escreva um programa que copie uma string para outra usando ponteiros.
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+  char str1[100], str2[100];
+  char *p1, *p2;
+
+  printf("Digite uma string: \n");
+  fgets(str1, sizeof(str1), stdin);
+  p1 = str1;
+
+  p2 = p1;
+
+  printf("String copiada: %s", p2);
+  
+  return 0;
+}
